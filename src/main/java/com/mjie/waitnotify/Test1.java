@@ -1,4 +1,4 @@
-package com.mjie.waitAndnotify;
+package com.mjie.waitnotify;
 
 /**
  * 在调用wait方法时，线程必须要持有被调用对象的锁，当调用wait方法后，线程就会释放掉该对象的锁（monitor）。

@@ -1,21 +1,32 @@
-package com.mjie.waitAndnotify;
+package com.mjie.waitnotify;
 
 public class MyCounter {
-    public int count;
 
-    public static void main(String[] args) {
-        MyCounter myCounter = new MyCounter();
+    private int count;
 
-        AddCounterThread addThread1 = new AddCounterThread(myCounter);
-        AddCounterThread addThread2 = new AddCounterThread(myCounter);
-        AddCounterThread addThread3 = new AddCounterThread(myCounter);
+    public synchronized void increase() {
+        while (count != 0) {
+            try {
+                wait();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+        count++;
+        System.out.println(count);
+        notifyAll();
+    }
 
-        SubstractCounterThread substractThread = new SubstractCounterThread(myCounter);
-
-        addThread1.start();
-        addThread2.start();
-        addThread3.start();
-
-        substractThread.start();
+    public synchronized void decrease() {
+        while (count == 0) {
+            try {
+                wait();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+        count--;
+        System.out.println(count);
+        notifyAll();
     }
 }
