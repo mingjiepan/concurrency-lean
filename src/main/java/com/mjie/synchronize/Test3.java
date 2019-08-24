@@ -22,6 +22,23 @@ package com.mjie.synchronize;
  *
  * 不过，当Owner运行的时间超过了临界值后，争用线程自旋一段时间后依然无法获取到锁，这时争用线程则会停止自旋而进入到阻塞状态。
  * 所以总体的思想是：先自旋，不成功再进行阻塞，尽量降低阻塞的可能性，这对那些执行时间很短的代码块来说有极大的性能提升。显然，自旋在多处理器（多核心）上才有意义。
+ *
+ * monitor 底层c++代码实现为ObjectMonitor对象，Object.wait() 为 ObjectMonitor.wait()
+ * ObjectWaiter双向链表（WaitSet和EntryList）
+ * WaitSet 当调用wait方法后，线程会进入WaitSet
+ * EntryList 争用monitor的线程会进入到EntryList中
+ *
+ *
+ *
+ * 线程获取对象的锁，通过系统调用获取mutex（针对synchronized）
+ *
+ *
+ *
+ * 互斥锁的属性
+ * 1，pthread_mutex_timed_np: 这是缺省值，也就是普通锁。当一个线程加锁后，其余请求锁的线程将会形成一个等待队列，并且在解锁后按照优先级获取到锁。这种策略可以确保资源分配的公平性。
+ * 2，pthread_mutex_recursive_np: 嵌套锁。允许一个线程对同一把锁成功获取多次，并通过unlock解锁。如果是不同线程请求，则在加锁线程解锁时重新进行竞争。
+ * 3，pthread_mutex_errorcheck_np: 检错锁。如果一个线程请求了同一个锁，则返回edeadlk，否则与pthread_mutex_timed_np类型动作相同，这样就保证了当不允许多次加锁时不会出现最简单情况下的死锁（不太理解）
+ * 4，pthread_mutex_adaptive_np: 适应锁，动作最简单的锁类型，仅仅等待解锁后重新竞争。
  */
 public class Test3 {
     public static synchronized void method() {
