@@ -15,6 +15,7 @@ repositories {
 }
 
 dependencies {
+    compile group: 'org.openjdk.jol', name: 'jol-core', version: '0.10'
     testCompile (
             'junit:junit:4.9'
     )
