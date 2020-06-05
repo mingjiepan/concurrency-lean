@@ -1,4 +1,4 @@
-package com.mjie.synchronize;
+package com.mjie.synchronize_volatile;
 
 /**
  * 对于synchronized关键字修饰方法来说，并没有出现monitorenter与monitorext指令，而是出现一个ACC_SYNCHRONIZED标志

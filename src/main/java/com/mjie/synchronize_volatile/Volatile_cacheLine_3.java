@@ -1,19 +1,18 @@
-package com.mjie.synchronize;
-
-import sun.misc.Contended;
+package com.mjie.synchronize_volatile;
 
 import java.util.concurrent.CountDownLatch;
 
-public class Cache1 {
+public class Volatile_cacheLine_3 {
 
     private static long count = 100000000L;
 
     /**
      * 保证和其他实例的成员变量不在同一行
      */
-    @Contended
     private static class T {
+        public volatile long l1,l2,l3,l4,l5,l6,l7,l8 = 0L;
         public volatile long x = 0L;
+        public volatile long l9,l10,l11,l12,l13,l14,l15 = 0L;
     }
 
     public static T[] arr = new T[2];
@@ -42,20 +41,10 @@ public class Cache1 {
         });
 
 
-        long timeMillis = System.nanoTime();
+        long timeMillis = System.currentTimeMillis();
         t1.start();
         t2.start();
         countDownLatch.await();
-        System.out.println("执行耗时 " + (System.nanoTime() - timeMillis));
-
-
-
-
+        System.out.println("执行耗时 " + (System.currentTimeMillis() - timeMillis));
     }
-
-
-
-
-
-
 }

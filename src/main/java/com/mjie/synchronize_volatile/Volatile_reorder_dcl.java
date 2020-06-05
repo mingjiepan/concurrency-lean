@@ -1,13 +1,26 @@
-package com.mjie.synchronize;
+package com.mjie.synchronize_volatile;
 
-public class Dcl2 {
+/**
+ * 查看字节码，看对象的生成过程
+ */
+class Dcl1 {
+    int m = 8;
+    public static void main(String[] args) {
+        Dcl1 dcl1 = new Dcl1();
+    }
+}
+
+/**
+ *
+ */
+public class Volatile_reorder_dcl {
     //若getInstance没被调，dcl2还是会被new出来，占据内存资源
-    private static final Dcl2 dcl2 = new Dcl2();
+    private static final Volatile_reorder_dcl VOLATILEREORDERDCL = new Volatile_reorder_dcl();
 
-    private Dcl2() {}
+    private Volatile_reorder_dcl() {}
 
-    public static Dcl2 getInstance() {
-        return dcl2;
+    public static Volatile_reorder_dcl getInstance() {
+        return VOLATILEREORDERDCL;
     }
 }
 

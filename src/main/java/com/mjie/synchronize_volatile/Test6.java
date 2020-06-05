@@ -1,4 +1,4 @@
-package com.mjie.synchronize;
+package com.mjie.synchronize_volatile;
 
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ConcurrentHashMap;

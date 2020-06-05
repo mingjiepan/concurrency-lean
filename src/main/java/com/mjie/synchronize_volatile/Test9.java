@@ -1,4 +1,4 @@
-package com.mjie.synchronize;
+package com.mjie.synchronize_volatile;
 
 /**
  死锁：线程1等待线程2互斥持有的资源，而线程2也在等待线程1互斥持有的资源，两个线程都无法继续执行

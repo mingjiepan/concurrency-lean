@@ -1,13 +1,12 @@
-package com.mjie.synchronize;
+package com.mjie.synchronize_volatile;
 
 
 /**
  * CPU乱序执行，指令重排序
  */
-public class Disorder {
+public class Volatile_reorder {
     static int x,y = 0;
     static int a,b = 0;
-
 
     public static void main(String[] args) throws Exception {
         int i = 0;

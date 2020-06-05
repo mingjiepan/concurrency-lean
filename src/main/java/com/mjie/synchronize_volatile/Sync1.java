@@ -1,14 +1,12 @@
-package com.mjie.synchronize;
+package com.mjie.synchronize_volatile;
 
 import java.util.Arrays;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.atomic.AtomicInteger;
 
-
 /**
  * JIT  just in time compile
  */
-
 public class Sync1 {
     static AtomicInteger atomicInteger = new AtomicInteger(1);
 

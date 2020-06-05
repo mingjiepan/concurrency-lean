@@ -1,4 +1,4 @@
-package com.mjie.synchronize;
+package com.mjie.synchronize_volatile;
 
 /**
  * 锁消除

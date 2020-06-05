@@ -1,4 +1,4 @@
-package com.mjie.synchronize;
+package com.mjie.synchronize_volatile;
 
 /**
  * jvm的同步是基于进入与退出监视器对象（管程对象）（Monitor）来实现的，每个对象实例都会有一个Monitor对象，Monitor对象会和Java对象一同创建并销毁

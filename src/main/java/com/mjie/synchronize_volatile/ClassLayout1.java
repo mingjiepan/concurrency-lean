@@ -1,4 +1,4 @@
-package com.mjie.synchronize;
+package com.mjie.synchronize_volatile;
 
 import org.openjdk.jol.info.ClassLayout;
 /**
@@ -31,10 +31,6 @@ import org.openjdk.jol.info.ClassLayout;
  * lock cmpxchg  指令    lock addl
  *
  * MESI 缓存一致性协议  lock addl如何使其他cpu的缓存失效
- *
- *
- *
- *
  *
  */
 public class ClassLayout1 {
