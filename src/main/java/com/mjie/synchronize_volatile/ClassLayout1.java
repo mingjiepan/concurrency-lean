@@ -3,7 +3,7 @@ package com.mjie.synchronize_volatile;
 import org.openjdk.jol.info.ClassLayout;
 /**
  *
- * java -XX:+PrintFlagsFinal
+ *  java -XX:+PrintCommandLineFlags -version
  *
  *
  * 早期的synchronized锁是重量级锁，因为申请锁资源需要经过内核态kernel，系统调用

@@ -7,7 +7,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 /**
  * JIT  just in time compile
  */
-public class Sync1 {
+public class CAS_1 {
     static AtomicInteger atomicInteger = new AtomicInteger(1);
 
     public static void main(String[] args) throws Exception {

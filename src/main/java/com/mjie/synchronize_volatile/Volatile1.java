@@ -19,6 +19,8 @@ package com.mjie.synchronize_volatile;
  *   happen-before 规范 （JVM规定重排序必须准守的规则） 8种情况不可以重排序，也就说jvm实现这8种情况下，必须加内存屏障
  *
  *   as if serial 不管如何重排序，单线程执行结果不会改变
+ *
+ *   超线程：一个ALU对应多个PC register 所谓的四核八线程
  */
 public class Volatile1 {
     //若没加volatile，那么线程将永远也不会退出
