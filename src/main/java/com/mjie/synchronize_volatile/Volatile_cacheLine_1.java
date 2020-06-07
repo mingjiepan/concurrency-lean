@@ -8,7 +8,7 @@ import java.util.concurrent.CountDownLatch;
  *  每个核心有自己的缓存（L1, L2）
  *
  *  缓存行对齐
- *  缓存行64个自己是CPU同步数据的基本单位，缓存行隔离会比共享效率要高
+ *  缓存行64个字节是CPU同步数据的基本单位，缓存行隔离会比共享效率要高
  *  CPU核心（线程）操作内存（主存）的数据时，会将内存的数据以cache line（缓存行）的形式，一次性读取一块（64个字节）内存数据（比如需要读取变量a，
  *  那么如果变量a所在的内存块（缓存行）还有其他变量，也会一并被读取cpu缓存中）到自己的核心缓存中。
  *
@@ -17,8 +17,7 @@ import java.util.concurrent.CountDownLatch;
  *
  *  缓存一致性MESI（modified exclusive share invalid）
  *
- *
- *
+ *  用于同一缓存行在多个CPU间保持数据一致性，该协议是intel的，并不是所有CPU都支持这个协议
  */
 public class Volatile_cacheLine_1 {
 
