@@ -4,11 +4,13 @@ import java.lang.ref.Reference;
 import java.lang.ref.ReferenceQueue;
 import java.util.LinkedList;
 import java.util.List;
-
 /**
  * 虚引用   管理堆外内存
+ * 虚引用在程序中调get方法时，始终返回的是null
+ * Java nio的zero copy 在heap上的DirectByteBuffer对象。指向对外的指针地址，对象内部又有虚引用，
+ * 当directByteBuffer对象被垃圾回收器回收时，对象关联的虚引用会加入到一个队列中，GC垃圾有专门的线程
+ * 来检测队列，若队列有值了，就会回收调堆外内存，从而避免内存泄露
  */
-
 public class T04_PhantomReference {
     private static final List<Object> LIST = new LinkedList<>();
     private static final ReferenceQueue<M> QUEUE = new ReferenceQueue<>();
