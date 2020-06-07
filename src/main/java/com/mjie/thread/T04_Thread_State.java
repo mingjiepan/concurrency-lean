@@ -13,5 +13,17 @@ package com.mjie.thread;
  */
 public class T04_Thread_State {
     public static void main(String[] args) {
+        Thread t = new Thread();
+
+        System.out.println(t.getState());
+
+        t.start();
+
+        try {
+            t.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        System.out.println(t.getState());
     }
 }

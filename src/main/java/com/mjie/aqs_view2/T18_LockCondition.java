@@ -1,10 +1,10 @@
-package com.mjie.demo;
+package com.mjie.aqs_view2;
 
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
-public class LockCondition {
+public class T18_LockCondition {
     public static void main(String[] args) throws InterruptedException {
         char[] a1 = "1234567890".toCharArray();
         char[] a2 = "abcdefghij".toCharArray();

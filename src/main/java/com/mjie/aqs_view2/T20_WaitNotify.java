@@ -1,6 +1,6 @@
-package com.mjie.demo;
+package com.mjie.aqs_view2;
 
-public class WaitNotify1 {
+public class T20_WaitNotify {
 
     static volatile boolean t2Start = false;
     private static Object object = new Object();

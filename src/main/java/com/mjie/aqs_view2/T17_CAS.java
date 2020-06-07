@@ -1,8 +1,6 @@
-package com.mjie.demo;
+package com.mjie.aqs_view2;
 
-import java.util.concurrent.locks.LockSupport;
-
-public class CasTest {
+public class T17_CAS {
 
     enum ReadToRun {T1, T2}
 

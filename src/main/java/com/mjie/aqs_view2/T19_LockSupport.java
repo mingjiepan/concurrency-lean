@@ -1,8 +1,8 @@
-package com.mjie.demo;
+package com.mjie.aqs_view2;
 
 import java.util.concurrent.locks.LockSupport;
 
-public class LockSupport1 {
+public class T19_LockSupport {
 
     static Thread t1 = null, t2 = null;
 

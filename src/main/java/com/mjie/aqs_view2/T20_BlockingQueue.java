@@ -1,10 +1,9 @@
-package com.mjie.demo;
+package com.mjie.aqs_view2;
 
 import java.util.concurrent.ArrayBlockingQueue;
-import java.util.concurrent.BlockingDeque;
 import java.util.concurrent.BlockingQueue;
 
-public class Test2 {
+public class T20_BlockingQueue {
 
     static BlockingQueue<String> q1 = new ArrayBlockingQueue(1);
     static BlockingQueue<String> q2 = new ArrayBlockingQueue(1);
