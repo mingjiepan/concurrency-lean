@@ -1,4 +1,4 @@
-package com.mjie.signal;
+package com.mjie.learn;
 
 public class BooleanSemaphore {
     private boolean isSignal = false;

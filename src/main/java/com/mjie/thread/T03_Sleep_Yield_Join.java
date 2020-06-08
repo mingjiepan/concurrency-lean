@@ -3,7 +3,7 @@ package com.mjie.thread;
 import java.util.concurrent.TimeUnit;
 
 /**
- * sleep 线程睡眠，将CPU让给其他线程运行
+ * sleep 线程睡眠，将CPU让给其他线程运行，线程不会释放对象的锁，而wait的，线程会释放对象的锁
  * yield  线程返回就绪状态，进入等待队列，和其他线程一起竞争，让出CPU
  * join 等待另一个线程的结束 t1线程里执行t2.join t1会等待t2线程执行完才继续执行t1后续的流程
  */

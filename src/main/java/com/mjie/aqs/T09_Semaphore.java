@@ -3,12 +3,8 @@ package com.mjie.aqs;
 import java.util.concurrent.Semaphore;
 
 /**
- * 限流
- *
- * 同时只能有几个人同时执行
- *
+ * 限流，设置permit许可数量，同时只能有几个线程获取到许可。然后执行
  * 车道和收费站
- *
  */
 public class T09_Semaphore {
 

@@ -1,4 +1,4 @@
-package com.mjie.signal;
+package com.mjie.learn;
 /**
  * 不要使用全局的锁对象或者字符串对象
  */

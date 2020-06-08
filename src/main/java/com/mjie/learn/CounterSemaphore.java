@@ -1,4 +1,4 @@
-package com.mjie.signal;
+package com.mjie.learn;
 
 public class CounterSemaphore {
     private int counter = 0;

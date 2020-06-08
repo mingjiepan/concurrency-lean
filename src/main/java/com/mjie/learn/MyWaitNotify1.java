@@ -1,4 +1,4 @@
-package com.mjie.signal;
+package com.mjie.learn;
 
 /**
  * 通过空循环来等待数据的处理

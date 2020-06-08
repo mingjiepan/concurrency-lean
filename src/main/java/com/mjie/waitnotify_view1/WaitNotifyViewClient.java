@@ -1,6 +1,6 @@
-package com.mjie.waitnotify;
+package com.mjie.waitnotify_view1;
 
-public class Test2 {
+public class WaitNotifyViewClient {
     public static void main(String[] args) {
         MyCounter myCounter = new MyCounter();
         IncreaseThread increaseThread = new IncreaseThread(myCounter);

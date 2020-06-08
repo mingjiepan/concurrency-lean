@@ -1,4 +1,4 @@
-package com.mjie.waitnotify;
+package com.mjie.waitnotify_view1;
 
 public class IncreaseThread extends Thread {
     private MyCounter myCounter;
